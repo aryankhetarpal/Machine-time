@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machining Time Estimation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Machining Time Estimation</h2>
+
+    <form method="POST">
+        <label for="machine">Select Machine:</label>
+        <select name="machine" id="machine" required>
+            {% for machine in machine_data %}
+            <option value="{{ machine['ID'] }}">{{ machine['Machine Name'] }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="block_length">Initial Block Length (mm):</label>
+        <input type="number" name="block_length" id="block_length" step="any" required>
+
+        <label for="block_width">Initial Block Width (mm):</label>
+        <input type="number" name="block_width" id="block_width" step="any" required>
+
+        <label for="block_height">Initial Block Height (mm):</label>
+        <input type="number" name="block_height" id="block_height" step="any" required>
+
+        <label for="final_length">Final Length (mm):</label>
+        <input type="number" name="final_length" id="final_length" step="any" required>
+
+        <label for="final_width">Final Width (mm):</label>
+        <input type="number" name="final_width" id="final_width" step="any" required>
+
+        <label for="final_height">Final Height (mm):</label>
+        <input type="number" name="final_height" id="final_height" step="any" required>
+
+        <button type="submit">Calculate Machining Time</button>
+    </form>
+
+    {% if result %}
+    <h2>Results</h2>
+    <p>Total Machining Time: {{ "%.3f"|format(result) }} minutes</p>
+    <p>Total Machining Time: {{ "%.3f"|format(total_time_hours) }} hours</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
