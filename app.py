@@ -9,8 +9,8 @@ machine_data = [
     {'ID': 2, 'Machine Name': 'WALDRICH COBURG', 'Cutter Diameter (mm)': 170.0, 'Feed Rate (mm/min)': 350.0, 'Speed (rpm)': 270.0, 'Depth of Cut (mm)': 3.0},
     {'ID': 3, 'Machine Name': 'HEYLIGENSTAEDT', 'Cutter Diameter (mm)': 170.0, 'Feed Rate (mm/min)': 350.0, 'Speed (rpm)': 270.0, 'Depth of Cut (mm)': 3.0},
     {'ID': 4, 'Machine Name': 'ingersel (BHOLE)', 'Cutter Diameter (mm)': 170.0, 'Feed Rate (mm/min)': 350.0, 'Speed (rpm)': 270.0, 'Depth of Cut (mm)': 3.0},
-    {'ID': 5, 'Machine Name': 'B W', 'Cutter Diameter (mm)': 80.0, 'Feed Rate (mm/min)': 450.0, 'Speed (rpm)': 735.0, 'Depth of Cut (mm)': 2.0},
-    {'ID': 6, 'Machine Name': 'T/C-1000', 'Cutter Diameter (mm)': 80.0, 'Feed Rate (mm/min)': 450.0, 'Speed (rpm)': 735.0, 'Depth of Cut (mm)': 2.0}
+    {'ID': 5, 'Machine Name': 'B W', 'Cutter Diameter (mm)': 80.0, 'Feed Rate (mm/min)': 1000.0, 'Speed (rpm)': 735.0, 'Depth of Cut (mm)': 2.5},
+    {'ID': 6, 'Machine Name': 'T/C-1000', 'Cutter Diameter (mm)': 80.0, 'Feed Rate (mm/min)': 1000.0, 'Speed (rpm)': 735.0, 'Depth of Cut (mm)': 2.5}
 ]
 
 # Function to calculate machining time
